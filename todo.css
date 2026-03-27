@@ -1,0 +1,156 @@
+/* Сброс стандартных отступов и применение border-box */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Стили всей страницы */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Основной контейнер приложения */
+.todo-container {
+    width: 500px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Заголовок */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Блок добавления задачи */
+.add-task {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* #taskInput (занимаем всё доступное пространство) */
+#taskInput {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* #taskInput:focus (зелёная рамка при фокусе) */
+#taskInput:focus {
+    outline: none;
+    border-color: #4caf50;
+    box-shadow: 0 0 3px #4caf50;
+}
+
+/* #addBtn */
+#addBtn {
+    padding: 10px 15px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* #addBtn:hover */
+#addBtn:hover {
+    background-color: #45a049;
+}
+
+/* Список задач (убираем маркеры) */
+.task-list {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+/* Элемент задачи */
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    gap: 10px;
+}
+
+/* .task-item:hover */
+.task-item:hover {
+    background-color: #f9f9f9;
+}
+
+/* Текст задачи (занимает всё доступное пространство) */
+.task-text {
+    flex: 1;
+    font-size: 16px;
+}
+
+/* .task-text.completed (зачёркивание выполненной задачи) */
+.task-text.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+/* Контейнер для кнопок задачи */
+.task-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+/* Общие стили кнопок */
+.task-buttons button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+/* Кнопка "Выполнено" */
+.complete-btn {
+    background-color: #2196f3;
+    color: white;
+}
+
+/* .complete-btn:hover */
+.complete-btn:hover {
+    background-color: #0b7dda;
+}
+
+/* Кнопка "Удалить" */
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+/* .delete-btn:hover */
+.delete-btn:hover {
+    background-color: #da190b;
+}
+
+/* Информационный блок (отступы, разделитель, выравнивание) */
+.info {
+    text-align: center;
+    padding-top: 15px;
+    border-top: 1px solid #ddd;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Меняем цвет и начертание счётчика */
+#taskCounter {
+    font-weight: bold;
+    color: #4caf50;
+}
